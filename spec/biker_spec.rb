@@ -9,6 +9,8 @@ RSpec.describe Biker do
       expect(biker).to be_a(Biker)
       expect(biker.name).to eq("Kenny")
       expect(biker.max_distance).to eq(30)
+      expect(biker.rides).to eq({})
+      expect(biker.acceptable_terrain).to eq([])
     end 
   end 
 end 
