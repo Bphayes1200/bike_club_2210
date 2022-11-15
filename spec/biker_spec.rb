@@ -13,4 +13,14 @@ RSpec.describe Biker do
       expect(biker.acceptable_terrain).to eq([])
     end 
   end 
+
+  describe '#learn terrain' do 
+    it 'will teach biker a terrain' do 
+      biker = Biker.new("Kenny", 30)
+      biker.learn_terrain!(:gravel)
+      biker.learn_terrain!(:hills)
+
+      expect(biker.acceptable_terrain).to eq([:gravel, :hills])
+    end 
+  end 
 end 
