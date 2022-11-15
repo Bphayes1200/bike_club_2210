@@ -3,7 +3,7 @@ require './lib/ride'
 RSpec.describe Ride do 
   describe '#initialize' do 
     it 'will exist and have attributes' do 
-      Ride.new({name: "Walnut Creek Trail", distance: 10.7, loop: false, terrain: :hills})
+      ride1 = Ride.new({name: "Walnut Creek Trail", distance: 10.7, loop: false, terrain: :hills})
 
       expect(ride1).to be_a(Ride)
       expect(ride1.name).to eq("Walnut Creek Trail")
